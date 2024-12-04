@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.image-container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    transform: none;
+    text-align: left;
+    color: white;
+    width: 55%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.title-group {
+    margin-bottom: 2rem;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: #FF8E3C;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 
+        0 0 10px rgba(255, 142, 60, 0.5),
+        0 0 20px rgba(255, 142, 60, 0.3);
+    transition: all 0.3s ease;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.artistic-text {
+    font-style: italic;
+    color: #4ecdc4;
+}
+
+.moon-text {
+    font-weight: bold;
+    color: #ff6b6b;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.coming-soon {
+    color: #00ff9d;
+    font-weight: bold;
+    text-shadow: 
+        0 0 10px rgba(0, 255, 157, 0.5),
+        0 0 20px rgba(0, 255, 157, 0.3);
+}
+
+.artistic-text.coming-soon {
+    color: #00ff9d;
+    font-style: italic;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff,
+                     0 0 20px #fff,
+                     0 0 30px #4ecdc4;
+    }
+    to {
+        text-shadow: 0 0 20px #fff,
+                     0 0 30px #ff6b6b,
+                     0 0 40px #ff6b6b;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .text-overlay {
+        width: 90%;
+        top: 3%;
+        left: 1%;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+        text-shadow: 
+            0 0 5px rgba(255, 142, 60, 0.5),
+            0 0 10px rgba(255, 142, 60, 0.3);
+    }
+    
+    .description {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+}
+
+.twitter-icon {
+    width: 24px;
+    height: 24px;
+    color: #00ff9d; /* Mismo color que coming-soon */
+    filter: drop-shadow(0 0 5px rgba(0, 255, 157, 0.5));
+    vertical-align: middle;
+}
+
+.twitter-icon:hover {
+    color: #fff;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
